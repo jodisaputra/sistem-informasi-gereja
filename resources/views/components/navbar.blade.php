@@ -8,17 +8,17 @@
             <h2 class="text-xl font-bold tracking-tight text-[#111418]">Gereja Immanuel</h2>
         </div>
         <nav class="hidden lg:flex items-center gap-8">
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Ministries</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Sermons</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Events</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="{{ url('/') }}">Beranda</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Tentang Kami</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Pelayanan</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Khotbah</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Acara</a>
         </nav>
         <div class="flex items-center gap-3">
             <a href="#"
                 class="flex items-center gap-2 rounded-lg bg-primary px-5 py-2 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
                 <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
-                <span>Give</span>
+                <span>Persembahan</span>
             </a>
 
             @auth
@@ -47,13 +47,13 @@
                         x-transition:leave-end="transform opacity-0 scale-95"
                         class="absolute right-0 top-full mt-2 w-56 rounded-xl bg-white dark:bg-[#1c2631] border border-gray-100 dark:border-white/10 shadow-xl overflow-hidden py-1 z-[60]"
                         style="display: none;">
-                        <a class="dropdown-item text-gray-700 dark:text-gray-200" href="#dashboard">
+                        <a class="dropdown-item text-gray-700 dark:text-gray-200" href="{{ route('dashboard') }}">
                             <span class="material-symbols-outlined text-xl opacity-70">dashboard</span>
-                            My Dashboard
+                            Dashboard Saya
                         </a>
                         <a class="dropdown-item text-gray-700 dark:text-gray-200" href="{{ route('profile.edit') }}">
                             <span class="material-symbols-outlined text-xl opacity-70">person_edit</span>
-                            Edit Profile
+                            Edit Profil
                         </a>
                         <div class="my-1 border-t border-gray-100 dark:border-white/5"></div>
 
@@ -63,7 +63,7 @@
                             <a class="dropdown-item text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 cursor-pointer"
                                 onclick="event.preventDefault(); this.closest('form').submit();">
                                 <span class="material-symbols-outlined text-xl">logout</span>
-                                Logout
+                                Keluar
                             </a>
                         </form>
                     </div>
@@ -92,21 +92,24 @@
         x-transition:leave-end="opacity-0 -translate-y-2" class="lg:hidden border-t border-gray-100 bg-white"
         style="display: none;">
         <nav class="flex flex-col p-4 space-y-4">
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Ministries</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Sermons</a>
-            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Events</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="{{ url('/') }}">Beranda</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Tentang Kami</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Pelayanan</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Khotbah</a>
+            <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Acara</a>
             <div class="pt-4 border-t border-gray-100">
-                <p class="text-xs font-bold text-gray-500 uppercase mb-2">My Account</p>
+                <p class="text-xs font-bold text-gray-500 uppercase mb-2">Akun Saya</p>
                 <a class="flex items-center gap-2 py-2 text-sm font-medium hover:text-primary transition-colors"
-                    href="#dashboard">
+                    href="{{ route('dashboard') }}">
                     <span class="material-symbols-outlined text-lg">dashboard</span> Dashboard
                 </a>
-                <a class="flex items-center gap-2 py-2 text-sm font-medium hover:text-primary transition-colors"
-                    href="#">
-                    <span class="material-symbols-outlined text-lg">logout</span> Logout
-                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="flex items-center gap-2 py-2 text-sm font-medium hover:text-primary transition-colors cursor-pointer"
+                        onclick="event.preventDefault(); this.closest('form').submit();">
+                        <span class="material-symbols-outlined text-lg">logout</span> Keluar
+                    </a>
+                </form>
             </div>
         </nav>
     </div>

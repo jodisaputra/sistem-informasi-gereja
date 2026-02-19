@@ -21,6 +21,27 @@ class ProfileController extends Controller
         ]);
     }
 
+    public function security(Request $request): View
+    {
+        return view('profile.security', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function history(Request $request): View
+    {
+        return view('profile.history', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function notifications(Request $request): View
+    {
+        return view('profile.notifications', [
+            'user' => $request->user(),
+        ]);
+    }
+
     /**
      * Update the user's profile information.
      */
