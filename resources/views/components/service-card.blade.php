@@ -1,7 +1,7 @@
 @props(['title', 'time', 'location', 'image'])
 
 <div
-    class="group flex flex-col overflow-hidden rounded-xl bg-background-light dark:bg-white/5 border border-primary/10 transition-all hover:shadow-2xl hover:-translate-y-2">
+    class="group flex flex-col overflow-hidden rounded-xl bg-background-light border border-primary/10 transition-all hover:shadow-2xl hover:-translate-y-2">
     <div class="aspect-video w-full overflow-hidden bg-center bg-cover" data-alt="Church sanctuary"
         style="background-image: url('{{ $image }}');"></div>
     <div class="p-8">
@@ -10,7 +10,7 @@
             <span class="text-sm font-bold uppercase tracking-wider">{{ $title }}</span>
         </div>
         <h3 class="text-2xl font-bold mb-2">{{ $time }}</h3>
-        <p class="text-[#617589] dark:text-gray-400 mb-6 flex items-center gap-2">
+        <p class="text-[#617589] mb-6 flex items-center gap-2">
             <span class="material-symbols-outlined text-base">location_on</span>
             {{ $location }}
         </p>

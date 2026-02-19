@@ -1,4 +1,4 @@
-<section class="py-24 px-6 md:px-20 bg-background-light dark:bg-background-dark">
+<section class="py-24 px-6 md:px-20 bg-background-light">
     <div class="mx-auto max-w-[1280px]">
         <div class="flex flex-col lg:flex-row items-center gap-16">
             <div
@@ -16,9 +16,9 @@
             </div>
             <div class="w-full lg:w-1/2">
                 <h4 class="text-primary font-bold tracking-widest uppercase mb-4 text-sm">Latest Sermon</h4>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-[#111418] dark:text-white">Menemukan
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-[#111418]">Menemukan
                     Kedamaian dalam Badai</h2>
-                <p class="text-lg text-[#617589] dark:text-gray-400 mb-8 leading-relaxed">
+                <p class="text-lg text-[#617589] mb-8 leading-relaxed">
                     Pesan minggu ini mengajak kita untuk merenungkan bagaimana iman dapat memberikan ketenangan sejati
                     di tengah tantangan hidup yang paling berat sekalipun.
                 </p>

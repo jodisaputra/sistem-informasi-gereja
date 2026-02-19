@@ -11,5 +11,5 @@
     </div>
     <span class="text-sm text-[#617589] mb-2 uppercase tracking-tighter font-semibold">{{ $date }}</span>
     <h3 class="text-xl font-bold mb-3 hover:text-primary cursor-pointer transition-colors">{{ $title }}</h3>
-    <p class="text-[#617589] dark:text-gray-400 line-clamp-2">{{ $description }}</p>
+    <p class="text-[#617589] line-clamp-2">{{ $description }}</p>
 </div>
